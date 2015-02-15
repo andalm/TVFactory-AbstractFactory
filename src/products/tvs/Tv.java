@@ -3,15 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package products;
+package products.tvs;
 
 import factories.AbstractTvFactory;
+import products.interfaces.*;
 
 /**
  *
  * @author Adam
  */
-public abstract class Tv {
+public abstract class Tv implements ITv{
   private String model;
   private AbstractTvFactory manufacturer;
 

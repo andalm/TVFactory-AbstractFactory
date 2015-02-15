@@ -3,16 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package products;
+package products.tvs;
 
 import factories.AbstractTvFactory;
-import products.interfaces.ITv;
 
 /**
  *
  * @author Adam
  */
-public class AirplaneTv extends Tv implements ITv{
+public class AirplaneTv extends Tv {
   
   public AirplaneTv(AbstractTvFactory manufacturer){
     super.setModel("Airplane TV");
@@ -29,14 +28,22 @@ public class AirplaneTv extends Tv implements ITv{
     return "TV off";
   }
 
+  /**
+   *
+   * @param value the value of value
+   */
   @Override
-  public String raiseVolume() {
-    return "Rise volume";
+  public String increaseVolume(int value) {
+    return "Increase volume " + value;
   }
 
+  /**
+   *
+   * @param value the value of value
+   */
   @Override
-  public String decreaseVolume() {
-    return "Decrease volume";
+  public String decreaseVolume(int value) {
+    return "Decrease volume " + value;
   }
   
 }
