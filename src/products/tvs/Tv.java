@@ -26,7 +26,7 @@ public abstract class Tv implements ITv{
   /**
    * @param model the model to set
    */
-  public void setModel(String model) {
+  protected void setModel(String model) {
     this.model = model;
   }
 
@@ -40,7 +40,7 @@ public abstract class Tv implements ITv{
   /**
    * @param manufacturer the manufacturer to set
    */
-  public void setManufacturer(AbstractTvFactory manufacturer) {
+  protected void setManufacturer(AbstractTvFactory manufacturer) {
     this.manufacturer = manufacturer;
   }
 }
