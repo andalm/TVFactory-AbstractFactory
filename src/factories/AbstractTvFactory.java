@@ -5,7 +5,7 @@
  */
 package factories;
 
-import products.*;
+import products.tvs.*;
 
 /**
  *
@@ -15,18 +15,18 @@ public abstract class AbstractTvFactory {
   private String name;
   
   public Tv makeTv(int type) {
-     Tv madeTv;
+     Tv tvMade;
     switch(type){
       case 1:
-        madeTv = new CarTv(this);
+        tvMade = new CarTv(this);
         break;
       case 2:
-        madeTv = new AirplaneTv(this);
+        tvMade = new AirplaneTv(this);
         break;
       default:
-        madeTv = new HomeTv(this);
+        tvMade = new HomeTv(this);
     }
-    return madeTv;
+    return tvMade;
   }
 
   /**

@@ -12,6 +12,16 @@ package products.interfaces;
 public interface ITv {
   public String on();
   public String off();
-  public String raiseVolume();
-  public String decreaseVolume();  
+
+  /**
+   *
+   * @param value the value of value
+   */
+  public String increaseVolume(int value);
+  
+  /**
+   *
+   * @param value the value of value
+   */
+  public String decreaseVolume(int value);  
 }

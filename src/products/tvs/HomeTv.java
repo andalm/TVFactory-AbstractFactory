@@ -3,22 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package products;
+package products.tvs;
 
 import factories.AbstractTvFactory;
-import products.interfaces.ITv;
 
 /**
  *
  * @author Adam
  */
-public class CarTv extends Tv implements ITv {
+public class HomeTv extends Tv {
   
-  public CarTv(AbstractTvFactory manufacturer){
-    super.setModel("Car TV");
+  public HomeTv(AbstractTvFactory manufacturer){
+    super.setModel("Home TV");
     super.setManufacturer(manufacturer);
   }
-  
+
   @Override
   public String on() {
     return "TV on";
@@ -29,14 +28,22 @@ public class CarTv extends Tv implements ITv {
     return "TV off";
   }
 
+   /**
+   *
+   * @param value the value of value
+   */
   @Override
-  public String raiseVolume() {
-    return "Rise volume";
+  public String increaseVolume(int value) {
+    return "Increase volume " + value;
   }
 
+  /**
+   *
+   * @param value the value of value
+   */
   @Override
-  public String decreaseVolume() {
-    return "Decrease volume";
+  public String decreaseVolume(int value) {
+    return "Decrease volume " + value;
   }
   
 }
