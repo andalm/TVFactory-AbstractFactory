@@ -15,18 +15,18 @@ public abstract class AbstractTvFactory {
   private String name;
   
   public Tv makeTv(int type) {
-     Tv tvMaked;
+     Tv madeTv;
     switch(type){
       case 1:
-        tvMaked = new CarTv(this);
+        madeTv = new CarTv(this);
         break;
       case 2:
-        tvMaked = new AirplaneTv(this);
+        madeTv = new AirplaneTv(this);
         break;
       default:
-        tvMaked = new HomeTv(this);
+        madeTv = new HomeTv(this);
     }
-    return tvMaked;
+    return madeTv;
   }
 
   /**
